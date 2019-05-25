@@ -9,3 +9,4 @@
 * https://www.oracle.com/corporate/features/understanding-java-9-modules.html
 * https://vimeo.com/289846017#t=2562s
 * https://github.com/micromata/sawdust
+* https://sormuras.github.io/blog/2018-09-11-testing-in-the-modular-world.html

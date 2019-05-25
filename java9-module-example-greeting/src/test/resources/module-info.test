@@ -1,0 +1,4 @@
+--add-reads
+  de.brauls.example.j9modex.greeting=org.junit.jupiter.api
+--add-opens
+  de.brauls.example.j9modex.greeting/de/brauls/example/j9modex/greeting=org.junit.platform.commons
