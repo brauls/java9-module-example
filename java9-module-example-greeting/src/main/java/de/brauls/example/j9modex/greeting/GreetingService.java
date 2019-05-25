@@ -1,4 +1,4 @@
-package de.brauls.example.greeting;
+package de.brauls.example.j9modex.greeting;
 
 public class GreetingService {
     public String greet() {

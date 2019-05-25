@@ -1,12 +1,12 @@
-package de.brauls.example.usermanagement.persistence;
+package de.brauls.example.j9modex.usermanagement.dto;
 
 import java.util.Objects;
 
-public class UserEntity {
+public class UserDto {
     private final String name;
     private final String mailAddress;
 
-    public UserEntity(final String name, final String mailAddress) {
+    public UserDto(final String name, final String mailAddress) {
         this.name = name;
         this.mailAddress = mailAddress;
     }
@@ -27,9 +27,9 @@ public class UserEntity {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        final UserEntity that = (UserEntity) o;
-        return name.equals(that.name) &&
-               mailAddress.equals(that.mailAddress);
+        final UserDto userDto = (UserDto) o;
+        return name.equals(userDto.name) &&
+               mailAddress.equals(userDto.mailAddress);
     }
 
     @Override
@@ -39,7 +39,7 @@ public class UserEntity {
 
     @Override
     public String toString() {
-        return "UserEntity{" +
+        return "UserDto{" +
                "name='" + name + '\'' +
                ", mailAddress='" + mailAddress + '\'' +
                '}';

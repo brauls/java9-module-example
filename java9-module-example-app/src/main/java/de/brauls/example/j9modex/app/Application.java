@@ -1,6 +1,6 @@
-package de.brauls.example.app;
+package de.brauls.example.j9modex.app;
 
-import de.brauls.example.greeting.GreetingService;
+import de.brauls.example.j9modex.greeting.GreetingService;
 
 public class Application {
 

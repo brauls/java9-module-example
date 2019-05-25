@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>de.brauls.example</groupId>
+    <groupId>de.brauls.example.j9modex</groupId>
     <artifactId>java9-module-example-parent</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
@@ -15,11 +15,29 @@
     </modules>
 
     <properties>
-        <java.version>1.11</java.version>
-        <jdk.version>11</jdk.version>
+        <junit.jupiter.version>5.4.2</junit.jupiter.version>
 
-        <plugin.mvn.compiler>3.8.1</plugin.mvn.compiler>
+        <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+        <plugin.mvn.surefire.version>2.22.0</plugin.mvn.surefire.version>
+        <junit.platform.maven.plugin.version>1.0.0-M5</junit.platform.maven.plugin.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-api</artifactId>
+                <version>${junit.jupiter.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-engine</artifactId>
+                <version>${junit.jupiter.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <pluginManagement>
@@ -27,10 +45,9 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>${plugin.mvn.compiler}</version>
+                    <version>${maven.compiler.plugin.version}</version>
                     <configuration>
-                        <source>${jdk.version}</source>
-                        <target>${jdk.version}</target>
+                        <release>11</release>
                     </configuration>
                 </plugin>
             </plugins>

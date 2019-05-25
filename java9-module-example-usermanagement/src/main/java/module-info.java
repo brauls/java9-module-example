@@ -1,2 +1,3 @@
-module java9.module.example.usermanagement {
+module de.brauls.example.j9modex.usermanagement {
+    exports de.brauls.example.j9modex.usermanagement;
 }

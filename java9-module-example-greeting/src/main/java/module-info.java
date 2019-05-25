@@ -1,3 +1,3 @@
-module java9.module.example.greeting {
-    exports de.brauls.example.greeting;
+module de.brauls.example.j9modex.greeting {
+    exports de.brauls.example.j9modex.greeting;
 }

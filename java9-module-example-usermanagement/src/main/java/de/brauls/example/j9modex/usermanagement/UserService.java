@@ -1,8 +1,8 @@
-package de.brauls.example.usermanagement;
+package de.brauls.example.j9modex.usermanagement;
 
 import java.util.Optional;
 
-import de.brauls.example.usermanagement.dto.UserDto;
+import de.brauls.example.j9modex.usermanagement.dto.UserDto;
 
 public class UserService {
     public Optional<UserDto> findUser(final String name) {

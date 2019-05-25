@@ -1,3 +1,3 @@
-module java9.module.example.app {
-    requires java9.module.example.greeting;
+module de.brauls.example.j9modex.app {
+    requires de.brauls.example.j9modex.greeting;
 }
