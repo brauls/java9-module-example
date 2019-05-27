@@ -1,4 +1,5 @@
 --add-reads
   de.brauls.example.j9modex.usermanagement=org.junit.jupiter.api
+  de.brauls.example.j9modex.usermanagement.presistence=org.junit.jupiter.api
 --add-opens
   de.brauls.example.j9modex.usermanagement/de/brauls/example/j9modex/usermanagement=org.junit.platform.commons

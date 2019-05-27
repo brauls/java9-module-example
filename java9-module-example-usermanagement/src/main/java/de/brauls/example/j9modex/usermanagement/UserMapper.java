@@ -5,10 +5,10 @@ import de.brauls.example.j9modex.usermanagement.persistence.UserEntity;
 
 public class UserMapper {
     public UserDto userEntityToUserDto(final UserEntity userEntity) {
-        return null;
+        return new UserDto(userEntity.getName(), userEntity.getMailAddress());
     }
 
     public UserEntity userDtoToUserEntity(final UserDto userDto) {
-        return null;
+        return new UserEntity(userDto.getName(), userDto.getMailAddress());
     }
 }

@@ -18,6 +18,7 @@
         <java.version>11</java.version>
 
         <junit.jupiter.version>5.4.2</junit.jupiter.version>
+        <mockito.version>2.23.0</mockito.version>
 
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
         <maven.surefire.plugin.version>3.0.0-M3</maven.surefire.plugin.version>
@@ -37,6 +38,12 @@
                 <version>${junit.jupiter.version}</version>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-junit-jupiter</artifactId>
+                <version>${mockito.version}</version>
+                <scope>test</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -54,6 +61,13 @@
                 <plugin>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>${maven.surefire.plugin.version}</version>
+                    <configuration>
+                        <argLine>
+                            --add-opens de.brauls.example.j9modex.usermanagement/de.brauls.example.j9modex.usermanagement=ALL-UNNAMED
+                            --add-opens de.brauls.example.j9modex.usermanagement/de.brauls.example.j9modex.usermanagement.persistence=ALL-UNNAMED
+                            --add-opens de.brauls.example.j9modex.usermanagement/de.brauls.example.j9modex.usermanagement.dto=ALL-UNNAMED
+                        </argLine>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
