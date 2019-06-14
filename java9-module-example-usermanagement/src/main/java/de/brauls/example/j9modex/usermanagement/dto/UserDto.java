@@ -1,10 +1,16 @@
 package de.brauls.example.j9modex.usermanagement.dto;
 
 import java.util.Objects;
+import java.util.Optional;
 
 public class UserDto {
     private final String name;
     private final String mailAddress;
+
+    public UserDto(final String name) {
+        this.name = name;
+        mailAddress = null;
+    }
 
     public UserDto(final String name, final String mailAddress) {
         this.name = name;
@@ -15,8 +21,8 @@ public class UserDto {
         return name;
     }
 
-    public String getMailAddress() {
-        return mailAddress;
+    public Optional<String> getMailAddress() {
+        return Optional.ofNullable(mailAddress);
     }
 
     @Override
@@ -29,7 +35,7 @@ public class UserDto {
         }
         final UserDto userDto = (UserDto) o;
         return name.equals(userDto.name) &&
-               mailAddress.equals(userDto.mailAddress);
+               Objects.equals(mailAddress, userDto.mailAddress);
     }
 
     @Override

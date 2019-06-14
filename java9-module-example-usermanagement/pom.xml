@@ -24,4 +24,20 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <argLine>
+                        --add-opens de.brauls.example.j9modex.usermanagement/de.brauls.example.j9modex.usermanagement=ALL-UNNAMED
+                        --add-opens de.brauls.example.j9modex.usermanagement/de.brauls.example.j9modex.usermanagement.persistence=ALL-UNNAMED
+                        --add-opens de.brauls.example.j9modex.usermanagement/de.brauls.example.j9modex.usermanagement.dto=ALL-UNNAMED
+                        --add-opens de.brauls.example.j9modex.usermanagement/de.brauls.example.j9modex.usermanagement.exception=ALL-UNNAMED
+                        --add-opens de.brauls.example.j9modex.usermanagement/de.brauls.example.j9modex.usermanagement.mapper=ALL-UNNAMED
+                    </argLine>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

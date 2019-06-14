@@ -61,13 +61,6 @@
                 <plugin>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>${maven.surefire.plugin.version}</version>
-                    <configuration>
-                        <argLine>
-                            --add-opens de.brauls.example.j9modex.usermanagement/de.brauls.example.j9modex.usermanagement=ALL-UNNAMED
-                            --add-opens de.brauls.example.j9modex.usermanagement/de.brauls.example.j9modex.usermanagement.persistence=ALL-UNNAMED
-                            --add-opens de.brauls.example.j9modex.usermanagement/de.brauls.example.j9modex.usermanagement.dto=ALL-UNNAMED
-                        </argLine>
-                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>

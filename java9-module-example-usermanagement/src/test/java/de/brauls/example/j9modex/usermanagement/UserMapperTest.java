@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 import de.brauls.example.j9modex.usermanagement.dto.UserDto;
+import de.brauls.example.j9modex.usermanagement.mapper.UserMapper;
 import de.brauls.example.j9modex.usermanagement.persistence.UserEntity;
 
 class UserMapperTest {

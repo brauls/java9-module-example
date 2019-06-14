@@ -6,6 +6,11 @@ public class UserEntity {
     private final String name;
     private final String mailAddress;
 
+    public UserEntity(final String name) {
+        this.name = name;
+        mailAddress = null;
+    }
+
     public UserEntity(final String name, final String mailAddress) {
         this.name = name;
         this.mailAddress = mailAddress;

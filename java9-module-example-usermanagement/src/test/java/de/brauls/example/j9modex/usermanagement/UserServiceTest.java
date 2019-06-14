@@ -11,15 +11,15 @@ import static org.junit.jupiter.api.Assertions.fail;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.verifyZeroInteractions;
 import static org.mockito.Mockito.when;
 
 import de.brauls.example.j9modex.usermanagement.dto.UserDto;
 import de.brauls.example.j9modex.usermanagement.exception.UserAlreadyExistsException;
+import de.brauls.example.j9modex.usermanagement.mapper.UserMapper;
 import de.brauls.example.j9modex.usermanagement.persistence.UserEntity;
 import de.brauls.example.j9modex.usermanagement.persistence.UserRepository;
 
-public class UserServiceTest {
+class UserServiceTest {
     private static String USER_NAME = "userA";
     private static String MAIL_ADDRESS = "userA@example.com";
 
